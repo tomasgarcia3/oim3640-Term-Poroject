@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+  </head>
+  <body>
+    <h1>Contact Page</h1>
+    <form action="post">
+      <form method="post" action="https://oim-apis.herokuapp.com/form">
+        <fieldset>
+          <legend class="bold">Your Information:</legend>
+          <div class="space">
+            <label for="Name">Name:</label>
+            <input
+              id="Name"
+              type="text"
+              name="Name"
+              placeholder="Enter your name here"
+            />
+          </div>
+          <div class="space">
+            <label for="Email">Email:</label>
+            <input
+              id="Email"
+              type="text"
+              name="Email"
+              placeholder="Enter your email here"
+            />
+          </div>
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend class="bold">Your Review:</legend>
+          <div class="space">
+            <div>
+              <label for="select-airpods"
+                >What Apple Product did you purchase?</label
+              >
+              <select name="AirPods" id="select-airpods">
+                <option value="airpods-pro">AirPods Pro</option>
+                <option value="airpods-wireless-charging">
+                  AirPods with Wireless Charging Case
+                </option>
+                <option value="airpods">AirPods with Charging Case</option>
+              </select>
+            </div>
+          </div>
+          <div class="space">
+            What do you think of this product?
+            <div>
+              <label>
+                <input type="radio" name="product-review" value="Great" />
+                Great
+              </label>
+              <label>
+                <input type="radio" name="product-review" value="Awesome" />
+                Awesome
+              </label>
+              <label>
+                <input type="radio" name="" value="Good" />
+                Good
+              </label>
+            </div>
+          </div>
+          <div class="space">
+            <div>
+              <label for="comments">Comments:</label>
+            </div>
+            <div>
+              <textarea
+                name="comments"
+                id="comments"
+                cols="50"
+                rows="5"
+              ></textarea>
+            </div>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="emails"
+              id="emails"
+              value="emails"
+              checked
+            />
+            <label for="emails">Sign me up for email updates</label>
+          </div>
+          <div class="space">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+        </fieldset>
+      </form>
+    </form>
+  </body>
+</html>
