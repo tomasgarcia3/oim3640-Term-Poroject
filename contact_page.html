@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Page</title>
+    <link rel="stylesheet" href="page_template.css" />
   </head>
   <body>
+    <div class="bar">
+      <a href="/index.html">Home</a>
+      <a class="highlight" href="/contact_page.html">Contact</a>
+      <a href="/sitemap.html">Sitemap</a>
+      <a href="/north_america.html">North America</a>
+      <a href="/south_america.html">South America</a>
+      <a href="/europe.html">Europe</a>
+      <a href="/africa.html">Africa</a>
+      <a href="/asia.html">Asia</a>
+      <a href="/australia.html">Australia</a>
+    </div>
     <h1>Contact Page</h1>
     <form action="post">
       <form method="post" action="https://oim-apis.herokuapp.com/form">
         <fieldset>
-          <legend class="bold">Your Information:</legend>
+          <legend class="bold">Your Contact Information:</legend>
           <div class="space">
             <label for="Name">Name:</label>
             <input
@@ -30,26 +42,9 @@
               placeholder="Enter your email here"
             />
           </div>
-        </fieldset>
         <br />
-        <fieldset>
-          <legend class="bold">Your Review:</legend>
           <div class="space">
-            <div>
-              <label for="select-airpods"
-                >What Apple Product did you purchase?</label
-              >
-              <select name="AirPods" id="select-airpods">
-                <option value="airpods-pro">AirPods Pro</option>
-                <option value="airpods-wireless-charging">
-                  AirPods with Wireless Charging Case
-                </option>
-                <option value="airpods">AirPods with Charging Case</option>
-              </select>
-            </div>
-          </div>
-          <div class="space">
-            What do you think of this product?
+            What do you think of our website?
             <div>
               <label>
                 <input type="radio" name="product-review" value="Great" />
@@ -64,10 +59,11 @@
                 Good
               </label>
             </div>
+            <br>
           </div>
           <div class="space">
             <div>
-              <label for="comments">Comments:</label>
+              <label for="comments">Message:</label>
             </div>
             <div>
               <textarea
@@ -88,9 +84,9 @@
             />
             <label for="emails">Sign me up for email updates</label>
           </div>
+          <br>
           <div class="space">
             <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
           </div>
         </fieldset>
       </form>

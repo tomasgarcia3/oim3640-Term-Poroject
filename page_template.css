@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+.bar {
+  background-color: black;
+  overflow: hidden;
+}
+
+.bar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.bar a:hover {
+  background-color: white;
+  color: black;
+}
+
+.bar a.highlight {
+  background-color: blue;
+  color: white;
+}
