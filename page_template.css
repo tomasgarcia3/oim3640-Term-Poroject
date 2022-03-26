@@ -26,3 +26,12 @@ body{
   background-color: blue;
   color: white;
 }
+
+.text{
+  max-width:1000px;
+  padding: 12px 60px;
+}
+
+h1{
+  text-align: center;
+}

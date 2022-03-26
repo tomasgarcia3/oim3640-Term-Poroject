@@ -4,14 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Kitesurfing blog" content="Best kitesurfing spots around the world">
     <title>Index</title>
     <link rel="stylesheet" href="page_template.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons_png/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons_png/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons_png/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicons_png/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicons_png/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicons_png/favicon-16x16.png"
+    />
     <link rel="manifest" href="/favicons_png/site.webmanifest" />
   </head>
+  <style>
+    .head_image {
+      max-width: 100%;
+      height: auto;
+    }
+    .header {
+      position: relative;
+      margin: 0px;
+      padding: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1600px;
+      min-width: 500px;
+    }
+    .tittle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 12px 24px;
+      background-color: black;
+    }
+    table {
+      width: 60%;
+      margin-right: auto;
+      margin-left: auto;
+      border-collapse: collapse;
+    }
+    caption {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 10px;
+    }
+    td,
+    th {
+      vertical-align: auto;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
   <body>
+    <!-- Nav Bar -->
     <div class="bar">
       <a class="highlight" href="/index.html">Home</a>
       <a href="/contact_page.html">Contact</a>
@@ -23,7 +79,88 @@
       <a href="/asia.html">Asia</a>
       <a href="/australia.html">Australia</a>
     </div>
-    <h1>Kitesurfing Nomads</h1>
-    <p>This is the index page for this website. New updates coming soon...</p>
+    <!-- Header -->
+    <header class="header">
+      <img
+        class="head_image"
+        src="/images/home.jpg"
+        alt="kitesurfing home"
+        tittle="kitesurfing home"
+      />
+      <div class="tittle">
+        <h1 class="w3-xxlarge">Kitesurfing Nomads</h1>
+      </div>
+    </header>
+    <!-- Page content -->
+    <div class="text">
+      <h2>Who we are:</h2>
+      <p>
+        Kitesurfing Nomads is website dedicated to showcase the best kitesuring
+        spots to visit around the world. Is meant to inspire people who share a
+        passion for kitesurifing to travel the world while practicing the sport
+        they love. Each page has some of the most popular spots to practice kitesurfing per contient. It provides basic information on prices and wind conditions. 
+      </p>
+    </div>
+    <table>
+      <caption>
+        Kitesurfing Around the world!
+      </caption>
+      <tr>
+        <th>North America</th>
+        <th>South America</th>
+        <th>Europe</th>
+      </tr>
+      <tr>
+        <td class="images">
+          <img
+            src="/images/Kitesurfing-Hawaii.jpg"
+            alt="Kitesurfing Hawaii"
+            tittle="Kitesurfing Hawaii" width="200px"
+          />
+        </td>
+        <td>
+          <img
+          src="/images/kitesurf-paracas.jpeg"
+          alt="Kitesurfing Paracas"
+          tittle="Kitesurfing Paracas" width="200px"
+        />
+        </td>
+        <td>
+          <img
+          src="/images/kitesurfing-Tarifa,.jpg"
+          alt="Kitesurfing Tarifa"
+          tittle="Kitesurfing Tarifa" width="200px"
+        />
+        </td>
+      </tr>
+      <tr>
+        <th>Africa</th>
+        <th>Asia</th>
+        <th>Australia</th>
+      </tr>
+      <tr>
+        <td>
+          <img
+          src="/images/kitesurf-cape-town.jpg"
+          alt="Kitesurfing Cape Town"
+          tittle="Kitesurfing Cape Town" width="200px"
+        />
+        </td>
+        <td>
+          <img
+          src="/images/kitesurf-philippines.jpg"
+          alt="Kitesurfing Philippines"
+          tittle="Kitesurfing Philippines" width="200px"
+        />
+        </td>
+        <td>
+          <img
+          src="/images/kitesurf-australia.jpg"
+          alt="Kitesurfing Australia"
+          tittle="Kitesurfing Australia" width="200px"
+        />
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
