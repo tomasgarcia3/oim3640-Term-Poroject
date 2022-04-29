@@ -29,7 +29,8 @@
     />
     <link rel="manifest" href="/favicons_png/site.webmanifest" />
     <!-- At least Two pages (including homepage) are mobile compatible. -->
-    <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
   </head>
   <style>
     .head_image {
@@ -284,7 +285,11 @@
       };
 
       // Present a slide-show. (optional, but recommended)
-      const slides = ["/images/index/slideshow/home1.avif", "/images/index/slideshow/home2.avif", "/images/index/slideshow/home3.avif"];
+      const slides = [
+        "/images/index/slideshow/home1.avif",
+        "/images/index/slideshow/home2.avif",
+        "/images/index/slideshow/home3.avif",
+      ];
       let i = 0;
       function slideShow() {
         let homeImage = document.querySelector(".head_image");
