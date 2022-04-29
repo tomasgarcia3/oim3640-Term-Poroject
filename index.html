@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="Kitesurfing blog" content="Best kitesurfing spots around the world">
+    <meta
+      name="Kitesurfing blog"
+      content="Best kitesurfing spots around the world"
+    />
     <title>Index</title>
     <link rel="stylesheet" href="page_template.css" />
     <link
@@ -65,6 +68,10 @@
       text-align: center;
       padding: 10px;
     }
+    body {
+      background-color: rgb(37, 37, 37);
+      color: white;
+    }
   </style>
   <body>
     <!-- Nav Bar -->
@@ -98,69 +105,116 @@
         Kitesurfing Nomads is website dedicated to showcase the best kitesuring
         spots to visit around the world. Is meant to inspire people who share a
         passion for kitesurifing to travel the world while practicing the sport
-        they love. Each page has some of the most popular spots to practice kitesurfing per contient. It provides basic information on prices and wind conditions. 
+        they love. Each page has some of the most popular spots to practice
+        kitesurfing per contient. It provides basic information on prices and
+        wind conditions.
       </p>
     </div>
-    <table>
-      <caption>
-        Kitesurfing Around the world!
-      </caption>
-      <tr>
-        <th>North America</th>
-        <th>South America</th>
-        <th>Europe</th>
-      </tr>
-      <tr>
-        <td class="images">
-          <img
-            src="/images/Kitesurfing-Hawaii.jpg"
-            alt="Kitesurfing Hawaii"
-            tittle="Kitesurfing Hawaii" width="200px"
-          />
-        </td>
-        <td>
-          <img
-          src="/images/kitesurf-paracas.jpeg"
-          alt="Kitesurfing Paracas"
-          tittle="Kitesurfing Paracas" width="200px"
-        />
-        </td>
-        <td>
-          <img
-          src="/images/kitesurfing-Tarifa,.jpg"
-          alt="Kitesurfing Tarifa"
-          tittle="Kitesurfing Tarifa" width="200px"
-        />
-        </td>
-      </tr>
-      <tr>
-        <th>Africa</th>
-        <th>Asia</th>
-        <th>Australia</th>
-      </tr>
-      <tr>
-        <td>
-          <img
-          src="/images/kitesurf-cape-town.jpg"
-          alt="Kitesurfing Cape Town"
-          tittle="Kitesurfing Cape Town" width="200px"
-        />
-        </td>
-        <td>
-          <img
-          src="/images/kitesurf-philippines.jpg"
-          alt="Kitesurfing Philippines"
-          tittle="Kitesurfing Philippines" width="200px"
-        />
-        </td>
-        <td>
-          <img
-          src="/images/kitesurf-australia.jpg"
-          alt="Kitesurfing Australia"
-          tittle="Kitesurfing Australia" width="200px"
-        />
-        </td>
-      </tr>
-    </table>
+    <div>
+      <table>
+        <caption>
+          Kitesurfing Around the world!
+        </caption>
+        <tr>
+          <th>North America</th>
+          <th>South America</th>
+          <th>Europe</th>
+        </tr>
+        <tr>
+          <td class="images">
+            <a href="north_america.html">
+              <img
+                src="/images/Kitesurfing-Hawaii.jpg"
+                alt="Kitesurfing Hawaii"
+                tittle="Kitesurfing Hawaii"
+                width="200px"
+            /></a>
+          </td>
+          <td>
+            <a href="south_america.html">
+              <img
+                src="/images/kitesurf-paracas.jpeg"
+                alt="Kitesurfing Paracas"
+                tittle="Kitesurfing Paracas"
+                width="200px"
+              />
+            </a>
+          </td>
+          <td>
+            <a href="europe.html">
+              <img
+                src="/images/kitesurfing-Tarifa,.jpg"
+                alt="Kitesurfing Tarifa"
+                tittle="Kitesurfing Tarifa"
+                width="200px"
+              />
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th>Africa</th>
+          <th>Asia</th>
+          <th>Australia</th>
+        </tr>
+        <tr>
+          <td>
+            <a href="africa.html">
+              <img
+                src="/images/kitesurf-cape-town.jpg"
+                alt="Kitesurfing Cape Town"
+                tittle="Kitesurfing Cape Town"
+                width="200px"
+              />
+            </a>
+          </td>
+          <td>
+            <a href="asia.html">
+              <img
+                src="/images/kitesurf-philippines.jpg"
+                alt="Kitesurfing Philippines"
+                tittle="Kitesurfing Philippines"
+                width="200px"
+              />
+            </a>
+          </td>
+          <td>
+            <a href="australia.html">
+              <img
+                src="/images/kitesurf-australia.jpg"
+                alt="Kitesurfing Australia"
+                tittle="Kitesurfing Australia"
+                width="200px"
+              />
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <div class="center">
+      <button id="white">White and Black</button>
+      <button id="black">Black and White</button>
+    </div>
+    <script>
+      function changeTheme(color) {
+        // console.log("starting")
+        const body = document.querySelector("body");
+        if (color == white) {
+          console.log("starting");
+          body.style.backgroundColor = "white";
+          body.style.color = "black";
+        } else if (color == black) {
+          body.style.backgroundColor = "rgb(37, 37, 37)";
+          body.style.color = "white";
+        }
+      }
+
+      document.getElementById("white").onclick = function () {
+        changeTheme(white);
+      };
+      document.getElementById("black").onclick = function () {
+        changeTheme(black);
+      };
+    </script>
   </body>
 </html>

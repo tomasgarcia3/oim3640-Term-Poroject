@@ -24,13 +24,17 @@
       href="/favicons_png/favicon-16x16.png"
     />
     <link rel="manifest" href="/favicons_png/site.webmanifest" />
-  </head>
-  <style>
+    <style>
+      body {
+        background-color: rgb(37, 37, 37);
+        color: white;
+      }
       li a{
         text-decoration: none;
         color: white;
       }
-  </style>
+    </style>
+  </head>
   <body>
     <!-- Nav Bar -->
     <div class="bar">
@@ -65,5 +69,31 @@
         <li><a href="/contact_page.html">Contact</a></li> 
       </ul>
     </div>
+    <br />
+    <div class="center">
+      <button id="white">White and Black</button>
+      <button id="black">Black and White</button>
+    </div>
+    <script>
+      function changeTheme(color) {
+        // console.log("starting")
+        const body = document.querySelector("body");
+        if (color == white) {
+          console.log("starting");
+          body.style.backgroundColor = "white";
+          body.style.color = "black";
+        } else if (color == black) {
+          body.style.backgroundColor = "rgb(37, 37, 37)";
+          body.style.color = "white";
+        }
+      }
+
+      document.getElementById("white").onclick = function () {
+        changeTheme(white);
+      };
+      document.getElementById("black").onclick = function () {
+        changeTheme(black);
+      };
+    </script>
   </body>
 </html>
