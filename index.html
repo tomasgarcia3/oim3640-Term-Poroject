@@ -28,6 +28,8 @@
       href="/favicons_png/favicon-16x16.png"
     />
     <link rel="manifest" href="/favicons_png/site.webmanifest" />
+    <!-- At least Two pages (including homepage) are mobile compatible. -->
+    <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
   </head>
   <style>
     .head_image {
@@ -90,7 +92,7 @@
     <header class="header">
       <img
         class="head_image"
-        src="/images/home.jpg"
+        src="/images/index/slideshow/home1.avif"
         alt="kitesurfing home"
         tittle="kitesurfing home"
       />
@@ -116,26 +118,28 @@
           Kitesurfing Around the world!
         </caption>
         <tr>
-          <th>North America</th>
-          <th>South America</th>
-          <th>Europe</th>
+          <th id="north_america">North America</th>
+          <th id="south_america">South America</th>
+          <th id="europe">Europe</th>
         </tr>
         <tr>
           <td class="images">
             <a href="north_america.html">
               <img
-                src="/images/Kitesurfing-Hawaii.jpg"
-                alt="Kitesurfing Hawaii"
-                tittle="Kitesurfing Hawaii"
+                id="north_america_image"
+                src="/images/index/Kitesurf_north_america1.jpg"
+                alt="Kitesurfing North America"
+                tittle="Kitesurfing North America"
                 width="200px"
             /></a>
           </td>
           <td>
             <a href="south_america.html">
               <img
-                src="/images/kitesurf-paracas.jpeg"
-                alt="Kitesurfing Paracas"
-                tittle="Kitesurfing Paracas"
+                id="south_america_image"
+                src="/images/index/kitesurf_south_america1.jpg"
+                alt="Kitesurfing South America"
+                tittle="Kitesurfing South America"
                 width="200px"
               />
             </a>
@@ -143,26 +147,28 @@
           <td>
             <a href="europe.html">
               <img
-                src="/images/kitesurfing-Tarifa,.jpg"
-                alt="Kitesurfing Tarifa"
-                tittle="Kitesurfing Tarifa"
+                id="europe_image"
+                src="/images/index/kitesurf_europe1.jpg"
+                alt="Kitesurfing Europe"
+                tittle="Kitesurfing Europe"
                 width="200px"
               />
             </a>
           </td>
         </tr>
         <tr>
-          <th>Africa</th>
-          <th>Asia</th>
-          <th>Australia</th>
+          <th id="africa">Africa</th>
+          <th id="asia">Asia</th>
+          <th id="australia">Australia</th>
         </tr>
         <tr>
           <td>
             <a href="africa.html">
               <img
-                src="/images/kitesurf-cape-town.jpg"
-                alt="Kitesurfing Cape Town"
-                tittle="Kitesurfing Cape Town"
+                id="africa_image"
+                src="/images/index/kitesurf_africa1.jpg"
+                alt="Kitesurfing Africa"
+                tittle="Kitesurfing Africa"
                 width="200px"
               />
             </a>
@@ -170,9 +176,10 @@
           <td>
             <a href="asia.html">
               <img
-                src="/images/kitesurf-philippines.jpg"
-                alt="Kitesurfing Philippines"
-                tittle="Kitesurfing Philippines"
+                id="asia_image"
+                src="/images/index/kitesurf_asia1.jpg"
+                alt="Kitesurfing Asia"
+                tittle="Kitesurfing Asia"
                 width="200px"
               />
             </a>
@@ -180,7 +187,8 @@
           <td>
             <a href="australia.html">
               <img
-                src="/images/kitesurf-australia.jpg"
+                id="australia_image"
+                src="/images/index/kitesurf_australia1.jpg"
                 alt="Kitesurfing Australia"
                 tittle="Kitesurfing Australia"
                 width="200px"
@@ -196,8 +204,8 @@
       <button id="black">Black and White</button>
     </div>
     <script>
+      // Change the style of some element in response to the user's action.
       function changeTheme(color) {
-        // console.log("starting")
         const body = document.querySelector("body");
         if (color == white) {
           console.log("starting");
@@ -214,6 +222,82 @@
       };
       document.getElementById("black").onclick = function () {
         changeTheme(black);
+      };
+
+      // Change image(s) using mouseover and mouseout.
+      function imageSelector(continent) {
+        const image = document.getElementById(continent + "_image");
+        const tittle = document.getElementById(continent);
+        image.style.border = "1px solid red";
+        image.src = "/images/index/kitesurf_" + continent + "2.jpg";
+        tittle.style.color = "red";
+      }
+
+      function imageUnselector(continent) {
+        const image = document.getElementById(continent + "_image");
+        const tittle = document.getElementById(continent);
+        image.style.border = "none";
+        image.src = "/images/index/kitesurf_" + continent + "1.jpg";
+        tittle.style.color = "white";
+      }
+
+      document.getElementById("north_america_image").onmouseover = function () {
+        imageSelector("north_america");
+      };
+      document.getElementById("north_america_image").onmouseout = function () {
+        imageUnselector("north_america");
+      };
+
+      document.getElementById("south_america_image").onmouseover = function () {
+        imageSelector("south_america");
+      };
+      document.getElementById("south_america_image").onmouseout = function () {
+        imageUnselector("south_america");
+      };
+
+      document.getElementById("europe_image").onmouseover = function () {
+        imageSelector("europe");
+      };
+      document.getElementById("europe_image").onmouseout = function () {
+        imageUnselector("europe");
+      };
+
+      document.getElementById("africa_image").onmouseover = function () {
+        imageSelector("africa");
+      };
+      document.getElementById("africa_image").onmouseout = function () {
+        imageUnselector("africa");
+      };
+
+      document.getElementById("asia_image").onmouseover = function () {
+        imageSelector("asia");
+      };
+      document.getElementById("asia_image").onmouseout = function () {
+        imageUnselector("asia");
+      };
+
+      document.getElementById("australia_image").onmouseover = function () {
+        imageSelector("australia");
+      };
+      document.getElementById("australia_image").onmouseout = function () {
+        imageUnselector("australia");
+      };
+
+      // Present a slide-show. (optional, but recommended)
+      const slides = ["/images/index/slideshow/home1.avif", "/images/index/slideshow/home2.avif", "/images/index/slideshow/home3.avif"];
+      let i = 0;
+      function slideShow() {
+        let homeImage = document.querySelector(".head_image");
+        if (i == slides.length) {
+          i = 0;
+        }
+        homeImage.src = slides[i];
+        i++;
+        setTimeout(slideShow, 5000);
+      }
+
+      document.querySelector("body").onload = function () {
+        slideShow();
       };
     </script>
   </body>

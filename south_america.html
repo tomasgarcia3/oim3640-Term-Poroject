@@ -29,10 +29,25 @@
       href="/favicons_png/favicon-16x16.png"
     />
     <link rel="manifest" href="/favicons_png/site.webmanifest" />
+    <!-- At least Two pages (including homepage) are mobile compatible. -->
+    <link
+      rel="stylesheet"
+      media="mediatype and|not|only (expressions)"
+      href="print.css"
+    />
     <style>
       body {
         background-color: rgb(37, 37, 37);
         color: white;
+      }
+      #movingText {
+        position: absolute;
+      }
+      .movingText {
+        position: relative;
+        height: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
       }
     </style>
   </head>
@@ -63,6 +78,9 @@
       </div>
     </header>
     <!-- Page Content -->
+    <div class="movingText">
+      <h3 id="movingText">This text will move</h3>
+    </div>
     <div class="text">
       <table>
         <tr>
@@ -173,6 +191,35 @@
       <button id="black">Black and White</button>
     </div>
     <script>
+      // Animate something or add some other functionalities besides what is listed above.
+      const messageList = [
+        "Find more about the best kitesurfig spots in South America",
+        "Find the place you want to visit next based on your preferences",
+      ];
+      const text = document.getElementById("movingText");
+      let p = 5;
+      let i = 0;
+
+      function movingText() {
+        text.innerHTML = messageList[i];
+        text.style.left = p + "px";
+        if (p > document.querySelector(".movingText").clientWidth - 350) {
+          p = 5;
+          i++;
+          if (i === messageList.length) {
+            i = 0;
+          }
+        } else {
+          p = p + 5;
+        }
+        setTimeout(movingText, 50);
+      }
+
+      document.querySelector("body").onload = function () {
+        movingText();
+      };
+
+      // Other functionalities
       function changeTheme(color) {
         // console.log("starting")
         const body = document.querySelector("body");
