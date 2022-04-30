@@ -70,6 +70,23 @@
       color: white;
       font-family: "Times New Roman", Times, serif;
     }
+    /*At least Two pages (including homepage) are mobile compatible. */
+    @media (min-width: 768px) {
+        .header {
+          display: block;
+        }
+        .header_mobile{
+          display: none;
+        }
+      }
+    @media (max-width: 768px) {
+        .header {
+          display: none;
+        }
+        .header_mobile{
+          display: block;
+        }
+      }
   </style>
   <body>
     <!-- Nav Bar -->
@@ -85,19 +102,20 @@
       <a href="/australia.html">Australia</a>
     </div>
     <!-- Header -->
-    <div class="container">
-      <header class="header">
-        <img
-          class="head_image"
-          src="/images/index/slideshow/home1.avif"
-          alt="kitesurfing home"
-          tittle="kitesurfing home"
-        />
-        <div class="tittle">
-          <h1 class="w3-xxlarge">Kitesurfing Nomads</h1>
-        </div>
-      </header>
-    </div>
+    <header class="header">
+      <img
+        class="head_image"
+        src="/images/index/slideshow/home1.avif"
+        alt="kitesurfing home"
+        tittle="kitesurfing home"
+      />
+      <div class="tittle">
+        <h1 class="w3-xxlarge">Kitesurfing Nomads</h1>
+      </div>
+    </header>
+    <header class="header_mobile">
+      <h1 class="w3-xxlarge">Kitesurfing Nomads</h1>
+    </header>
     <!-- Page content -->
     <div class="text center container">
       <h2>Who we are:</h2>
